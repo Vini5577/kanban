@@ -35,5 +35,29 @@
       color: white;
     }
   }
+
+  .board-wrapper {
+    display: flex;
+    flex-grow: 1;
+    overflow-x: auto;
+
+    .board-columns {
+      display: flex;
+      flex-grow: 1;
+
+      .board-column {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+
+        min-width: 300px;
+        margin: 50px;
+        padding: 25px;
+
+        background: rgba(white, 0.5);
+      }
+    }
+
+  }
 }
 
