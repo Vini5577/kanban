@@ -14,13 +14,14 @@
 
     <div class="board-wrapper">
       <div class="board-columns">
-        <div class="board-column">
+        <div class="board-column" cdkDropL>
           <div class="column-title">
             Ideas
           </div>
 
-          <div class="tasks-container">
-            <div class="task">
+          <div class="tasks-container" cdkDropList #todoList="cdkDropList" [cdkDropListData]="todo"
+            (cdkDropListDropped)="drop($event)">
+            <div class="task" cdkDrag>
               This is something that I want to do!
             </div>
           </div>
